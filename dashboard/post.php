@@ -8,7 +8,7 @@
    } else {
       $page = $_GET['page'];
    }
-   $limit = 5;
+   $limit = 8;
    $offset = ($page - 1) * $limit;
 
    // pagination end ------------

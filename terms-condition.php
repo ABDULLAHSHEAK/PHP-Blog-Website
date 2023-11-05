@@ -20,10 +20,10 @@ $body = $result["terms"];
     <div class="row">
       <div class="col-lg-8">
         <h4 style="background: #6351ce;padding: 5px 0 7px 15px;color: #fff;border-radius:3px;">
-          About Us
+          Terms & Conditions
         </h4>
         <div class="card shadow p-4">
-          <?=$body?>
+          <?= $body ?>
           <!-- <div class="text">
             <h1>Terms & Conditions for Mas Blog</h1>
 

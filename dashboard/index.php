@@ -1,6 +1,8 @@
  <?php
   include 'header.php';
-
+  $query = "SELECT COUNT(*) AS total_posts FROM post";
+  $run = mysqli_query($con, $query);
+  $result = mysqli_fetch_assoc($run);
   ?>
  <!-- Begin Page Content -->
 
@@ -43,7 +45,7 @@
                      <span>Total Post </span>
                    </div>
                    <div class="align-self-center">
-                     <h1>18,000</h1>
+                     <h1><?= $result['total_posts'] ?></h1>
                    </div>
                  </div>
                </div>
@@ -64,7 +66,12 @@
                      <span>Total Post Category</span>
                    </div>
                    <div class="align-self-center">
-                     <h1>84,695</h1>
+                     <?php
+                      $query2 = "SELECT COUNT(*) AS total_cat FROM category";
+                      $run2 = mysqli_query($con, $query2);
+                      $result2 = mysqli_fetch_assoc($run2);
+                      ?>
+                     <h1><?= $result2['total_cat'] ?></h1>
                    </div>
                  </div>
                </div>
@@ -86,7 +93,12 @@
                      <span>Total Users </span>
                    </div>
                    <div class="align-self-center">
-                     <h1>84,695</h1>
+                     <?php
+                      $query3 = "SELECT COUNT(*) AS total_users FROM users";
+                      $run3 = mysqli_query($con, $query3);
+                      $result3 = mysqli_fetch_assoc($run3);
+                      ?>
+                     <h1><?= $result3['total_users'] ?></h1>
                    </div>
                  </div>
                </div>
@@ -104,7 +116,7 @@
                      <i class="icon-speech warning font-large-2 mr-2"></i>
                    </div>
                    <div class="media-body">
-                     <h4>Total Category</h4>
+                     <h4>Total Comments</h4>
                      <span>Total Post Category</span>
                    </div>
                    <div class="align-self-center">
