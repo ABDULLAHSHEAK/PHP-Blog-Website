@@ -73,7 +73,7 @@ $copy = $data["copy"];
               <h6 class="text-uppercase fw-bold" title="Short Description About This Website"><?= $about_title ?></h6>
               <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
               <p>
-                <?=$about_text?>
+                <?= $about_text ?>
               </p>
             </div>
             <!-- Grid column -->
@@ -118,12 +118,12 @@ $copy = $data["copy"];
               <!-- Links -->
               <h6 class="text-uppercase fw-bold" title="Contact Information">Contact</h6>
               <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
-              <p><i class="fa fa-address-card" aria-hidden="true"></i> 
-              <?=$address?>
-             </p>
-              <p><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:<?=$email?>"><?=$email?></a></p>
-              <p><i class="fa fa-facebook-square" aria-hidden="true"></i><a href="<?=$fb_url?>"> Facebook</a></p>
-              <p><i class="fa fa-phone-square" aria-hidden="true"></i> + <?=$mobile?></p>
+              <p><i class="fa fa-address-card" aria-hidden="true"></i>
+                <?= $address ?>
+              </p>
+              <p><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:<?= $email ?>"><?= $email ?></a></p>
+              <p><i class="fa fa-facebook-square" aria-hidden="true"></i><a href="<?= $fb_url ?>"> Facebook</a></p>
+              <p><i class="fa fa-phone-square" aria-hidden="true"></i> + <?= $mobile ?></p>
             </div>
             <!-- Grid column -->
           </div>
@@ -134,7 +134,7 @@ $copy = $data["copy"];
 
       <!-- Copyright -->
       <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-        © <?= $current_year ?> Copyright: <?=$copy?>
+        © <?= $current_year ?> Copyright: <?= $copy ?>
         <a class="text-white" href="https://www.facebook.com/abdullahshakeabir">Desgin & Develop by Md Abdullah Shake</a>
       </div>
       <!-- Copyright -->
@@ -148,8 +148,11 @@ $copy = $data["copy"];
 </div>
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<!-- ------ slider -----  -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+<!-- ------ slider -----  -->
 <script src="js/app.js"></script>
 </body>
 

@@ -22,10 +22,17 @@ $row = mysqli_num_rows($run);
 <div class="container mt-4 mb-4">
   <div class="row">
     <div class="col-lg-8">
+
+      <!-- <div class="add-cat">
+        <a href="">
+          <img src="assete/adds/cat-adds.jpg" alt="">
+        </a>
+      </div> -->
       <h4 style="background: #6351ce;
     padding: 5px 0 7px 15px;
     color: #fff;
     border-radius: 3px;">Category : <?= $category ?></h4>
+
       <?php
       if ($row) {
         while ($result = mysqli_fetch_array($run)) {

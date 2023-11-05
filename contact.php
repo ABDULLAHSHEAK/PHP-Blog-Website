@@ -1,6 +1,9 @@
 <?php
 include 'header.php';
-
+$query = "SELECT contact FROM pages";
+$run = mysqli_query($con, $query);
+$result = mysqli_fetch_assoc($run);
+$body = $result["contact"];
 ?>
 
 <!-- -------------- html code start -------------- -->
@@ -17,24 +20,29 @@ include 'header.php';
     <div class="row">
       <div class="col-lg-8">
         <h4 style="background: #6351ce;padding: 5px 0 7px 15px;color: #fff;border-radius:3px;">
-          About Us
+          Contact Us
         </h4>
         <div class="card shadow p-4">
-          <h1>Contact Us</h1>
 
-          <p>If you have any questions, feedback, or suggestions, please feel free to contact us. We value your input and will respond as soon as possible.</p>
+        <?=$body?>
+          <!-- <div class="text">
 
-          <h2>Contact Information</h2>
-          <p>If you prefer to reach out directly, you can contact us through the following methods:</p>
-          <ul>
-            <li>Email: <a href="mailto:abdullahsheak8636@.com">abdullahsheak8636@.com</a></li>
-            <li>Phone: [Insert Phone Number]</li>
-            <li>Facebook : <a href="https://www.facebook.com/abdullahshakeabir">Abdullahshake</a></li>
-            <li>Address: [Insert Address]</li>
-          </ul>
+            <h1>Contact Us</h1>
 
-          <h2>Contact Form</h2>
-          <p>Alternatively, you can use the contact form below:</p>
+            <p>If you have any questions, feedback, or suggestions, please feel free to contact us. We value your input and will respond as soon as possible.</p>
+
+            <h2>Contact Information</h2>
+            <p>If you prefer to reach out directly, you can contact us through the following methods:</p>
+            <ul>
+              <li>Email: <a href="mailto:abdullahsheak8636@.com">abdullahsheak8636@.com</a></li>
+              <li>Phone: [Insert Phone Number]</li>
+              <li>Facebook : <a href="https://www.facebook.com/abdullahshakeabir">Abdullahshake</a></li>
+              <li>Address: [Insert Address]</li>
+            </ul>
+
+            <h2>Contact Form</h2>
+            <p>Alternatively, you can use the contact form below:</p>
+          </div> -->
           <div class="container">
             <form>
               <div class="mb-3">

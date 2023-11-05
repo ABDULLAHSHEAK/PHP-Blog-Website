@@ -8,7 +8,7 @@ $title_result = mysqli_query($con, $title_query);
 $data = mysqli_fetch_assoc($title_result);
 $title = $data["site_title"];
 $icone = $data['site_icon'];
-      
+
 ?>
 
 <!DOCTYPE html>
@@ -17,12 +17,14 @@ $icone = $data['site_icon'];
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="assete/img/<?=$icone?>">
-  <title><?=$title?></title>
+  <link rel="icon" type="image/x-icon" href="assete/img/<?= $icone ?>">
+  <title><?= $title ?></title>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/slider.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+  
 </head>
 
 <body class="bg-light">
@@ -45,7 +47,7 @@ $icone = $data['site_icon'];
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 d-none d-lg-block d-md-block-d-sm-block d-xs-none text-end" id="page-top">
           <span class="me-3">
             <a class="text-white" href="terms-condition.php" title="Click To Visit Terms & Condition Page">
-              Terms & Condition <?=$icone?>
+              Terms & Condition <?= $icone ?>
             </a>
           </span>
           <span class="me-3">

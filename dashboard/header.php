@@ -86,6 +86,11 @@ $icone = $data['site_icon'];
         <li class="nav-item">
           <a class="nav-link collapsed" href="setting.php"> <span>Setting</span> </a>
         </li>
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block">
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="all-pages.php"> <span>Pages</span> </a>
+        </li>
 
       <?php } ?>
       <!-- Sidebar Toggler (Sidebar) -->

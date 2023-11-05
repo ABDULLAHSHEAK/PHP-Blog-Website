@@ -30,6 +30,14 @@ $run2 = mysqli_query($con, $sql2);
           </div>
         </form>
       </div>
+      <!-- ---- side bar adds -----  -->
+      <!-- <div class="side-sm-add">
+        <a href="#">
+          <img src="assete/adds/side-sm.jpg" alt="">
+        </a>
+      </div> <br />  -->
+
+      <!-- -------- adds -----  -->
       <div id="categories">
         <h6 title="Showing Populer categorys">Categories</h6>
         <ul>
@@ -59,6 +67,12 @@ $run2 = mysqli_query($con, $sql2);
             </li>
           <?php } ?>
         </ul>
+      </div>
+      <div class="adds">
+        <h6 title="Click For Sponsors">Advertising</h6>
+        <a href="contact.php">
+          <img src="assete/adds/adds.jpg" alt="adds image" title="Click For Sponsors" target='__blank'>
+        </a>
       </div>
     </div>
   </div>

@@ -1,5 +1,6 @@
 <?php
 include 'header.php';
+include 'slider.php';
 
 // pagination start 
 if (!isset($_GET['page'])) {
@@ -12,11 +13,116 @@ $offset = ($page - 1) * $limit;
 
 // pagination end ------------
 
-$sql = "SELECT * FROM post LEFT JOIN category ON post.category = category.cat_id LEFT JOIN users ON post.auth_id = users.user_id ORDER BY post.publish_date DESC limit $offset,$limit";
+// $sql = "SELECT * FROM post LEFT JOIN category ON post.category = category.cat_id LEFT JOIN users ON post.auth_id = users.user_id ORDER BY post.publish_date DESC limit $offset offset $limit";
+
+$sql = "SELECT * FROM post LEFT JOIN category ON post.category = category.cat_id LEFT JOIN users ON post.auth_id = users.user_id ORDER BY post.publish_date DESC limit $limit offset $offset ";
 
 $run = mysqli_query($con, $sql);
 $row = mysqli_num_rows($run);
 ?>
+
+<!-- ----------------------- post slider start ------------------------    -->
+<!-- ----------------------- post slider start ------------------------    -->
+<!-- <div class="demo">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 id="top_header">Letest Post</h2>
+        <div id="news-slider" class="owl-carousel">
+          <div class="post-slide">
+            <div class="post-img">
+              <a href="#"><img src="dashboard/upload/abdullah.jpeg" alt=""></a>
+            </div>
+            <div class="post-content">
+              <h3 class="post-title"><a href="#">Latest News Post</a></h3>
+              <p class="post-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec elementum mauris. Praesent vehicula gravida dolor, ac efficitur sem sagittis.
+              </p>
+              <ul class="post-bar">
+                <li><i class="fa fa-calendar"></i> June 5, 2016</li>
+                <li>
+                  <i class="fa fa-folder"></i>
+                  <a href="#">Mockup</a>
+                  <a href="#">Graphics</a>
+                  <a href="#">Flayers</a>
+                </li>
+              </ul>
+              <a href="#" class="read-more">read more</a>
+            </div>
+          </div>
+
+          <div class="post-slide">
+            <div class="post-img">
+              <a href="#"><img src="dashboard/upload/abdullah.jpg" alt=""></a>
+            </div>
+            <div class="post-content">
+              <h3 class="post-title"><a href="#">Latest News Post</a></h3>
+              <p class="post-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec elementum mauris. Praesent vehicula gravida dolor, ac efficitur sem sagittis.
+              </p>
+              <ul class="post-bar">
+                <li><i class="fa fa-calendar"></i> June 5, 2016</li>
+                <li>
+                  <i class="fa fa-folder"></i>
+                  <a href="#">Mockup</a>
+                  <a href="#">Graphics</a>
+                  <a href="#">Flayers</a>
+                </li>
+              </ul>
+              <a href="#" class="read-more">read more</a>
+            </div>
+          </div>
+
+          <div class="post-slide">
+            <div class="post-img">
+              <a href="#"><img src="dashboard/upload/abdullah.jpeg" alt=""></a>
+            </div>
+            <div class="post-content">
+              <h3 class="post-title"><a href="#">Latest News Post</a></h3>
+              <p class="post-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec elementum mauris. Praesent vehicula gravida dolor, ac efficitur sem sagittis.
+              </p>
+              <ul class="post-bar">
+                <li><i class="fa fa-calendar"></i> June 5, 2016</li>
+                <li>
+                  <i class="fa fa-folder"></i>
+                  <a href="#">Mockup</a>
+                  <a href="#">Graphics</a>
+                  <a href="#">Flayers</a>
+                </li>
+              </ul>
+              <a href="#" class="read-more">read more</a>
+            </div>
+          </div>
+
+          <div class="post-slide">
+            <div class="post-img">
+              <a href="#"><img src="dashboard/upload/abdullah.jpeg" alt=""></a>
+            </div>
+            <div class="post-content">
+              <h3 class="post-title"><a href="#">Latest News Post</a></h3>
+              <p class="post-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec elementum mauris. Praesent vehicula gravida dolor, ac efficitur sem sagittis.
+              </p>
+              <ul class="post-bar">
+                <li><i class="fa fa-calendar"></i> June 7, 2016</li>
+                <li>
+                  <i class="fa fa-folder"></i>
+                  <a href="#">Mockup</a>
+                  <a href="#">Graphics</a>
+                  <a href="#">Flayers</a>
+                </li>
+              </ul>
+              <a href="#" class="read-more">read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- ----------------------- post slider start ------------------------    -->
+<!-- ----------------------- post slider start ------------------------    -->
 <div class="container mt-4 mb-4">
   <div class="row">
     <div class="col-lg-8">
@@ -97,6 +203,16 @@ $row = mysqli_num_rows($run);
         </ul>
       <?php } ?>
       <!-- -------------------------------  -->
+      <!-- -------------------------------  -->
+      <!-- footer adds  -->
+      <!-- -------------------------------  -->
+      <!-- <div class="footer-add">
+        <a href="">
+          <img src="assete/adds/footer adds long.jpg" alt="">
+        </a>
+      </div> -->
+
+
     </div>
     <?php include 'sidebar.php'; ?>
   </div>
