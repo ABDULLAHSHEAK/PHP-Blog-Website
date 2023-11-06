@@ -40,7 +40,7 @@ if(isset($_POST['add_category'])){
         <h6 class="mt-2">Publish Your Airticle</h6>
       </div>
       <div>
-        <a href="index.php" class="btn btn-primary text-white">Back</a>
+        <a href="post.php" class="btn btn-primary text-white">Back</a>
       </div>
     </div>
     <div class="card-body">

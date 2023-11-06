@@ -86,10 +86,15 @@ $icone = $data['site_icon'];
         <li class="nav-item">
           <a class="nav-link collapsed" href="setting.php"> <span>Setting</span> </a>
         </li>
-        <!-- Divider -->
+        <!-- Divider pages -->
         <hr class="sidebar-divider d-none d-md-block">
         <li class="nav-item">
           <a class="nav-link collapsed" href="all-pages.php"> <span>Pages</span> </a>
+        </li>
+        <!-- Divider comment -->
+        <hr class="sidebar-divider d-none d-md-block">
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="comments.php"> <span>Comments</span> </a>
         </li>
 
       <?php } ?>

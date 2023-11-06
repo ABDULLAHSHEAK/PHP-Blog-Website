@@ -24,17 +24,8 @@ if (isset($_POST['login'])) {
     </div>";
     header('location:login.php');
   }
-} 
-  // $sql2 = "SELECT * FROM users";
-  // $query2 = mysqli_query($con, $sql);
-  // $user_data = mysqli_fetch_assoc($query2);
-  // $id = $user_data['user_id'];
-  // $db_email = $user_data['email'];
-  // $db_pass = $user_data['password']; 
+}
 
-  //   $user_date = array($id, $db_username, $db_pass);
-  //   session_start();
-  //   $_SESSION['user_data'] = $user_date;
 
 ?>
 <!doctype html>
@@ -45,27 +36,58 @@ if (isset($_POST['login'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Login Dashboard</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body style="background: #e5e5e5;">
   <div class="container">
     <div class="row">
       <div class="col-lg-6 col-md-8  mx-auto">
-        <div class="card-body p-5 bg-primary mt-5">
-          <h2 class="text-uppercase text-center mb-5 text-white">Login To Dashboard</h2>
+        <div class="card-body p-5 bg-white card-shadow mt-5 col-10 mx-auto">
           <?= $login_error ?>
-          <form action="" method="POST">
+          <div class="log-in-box">
+            <div class="log-in-title">
+              <h3>Welcome To MAS Blog</h3>
+              <h4>Log In Your Account</h4>
+            </div>
 
-            <div class="form-outline mb-4">
-              <input type="email" class="form-control form-control-lg" placeholder="username" name="email" required />
+            <div class="input-box">
+              <form class="row g-4" method="POST">
+                <div class="col-12">
+                  <div class="form-floating theme-form-floating log-in-form">
+                    <input type="email" name="email" class="form-control" id="email" placeholder="Email Address" required>
+                    <label for="email">Email Address</label>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="form-floating theme-form-floating log-in-form">
+                    <input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
+                    <label for="password">Password</label>
+                  </div>
+                </div>
+
+                <div class="col-12 ms-3">
+                  <div class="forgot-box">
+                    <div class="row">
+                      <div class="form-check ps-0 m-0 remember-box col-6">
+                        <input class="checkbox_animated check-box" type="checkbox" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">Remember me</label>
+                      </div>
+                      <div class="col-6"> <a href="forgot.html" class="forgot-password">Forgot Password?</a></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <button class="btn btn-primary btn-animation w-100 justify-content-center" type="submit" name="login">
+                    Log In
+                  </button>
+                </div>
+              </form>
             </div>
-            <div class="form-outline mb-4">
-              <input type="password" id="form3Example4cg" class="form-control form-control-lg" placeholder="Password" name="password" required />
-            </div>
-            <div class="d-flex justify-content-center">
-              <button type="submit" name="login" value="Submit" class="btn btn-light btn-block btn-lg gradient-custom-4 text-body">Login</button>
-            </div>
-          </form>
+
+          </div>
         </div>
       </div>
     </div>

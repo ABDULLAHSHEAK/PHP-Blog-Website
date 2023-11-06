@@ -5,7 +5,7 @@ $run = mysqli_query($con, $sql);
 
 // show recent post os side bar
 
-$sql2 = "SELECT * FROM post ORDER BY post.publish_date DESC LIMIT 10";
+$sql2 = "SELECT * FROM post ORDER BY post.publish_date DESC LIMIT 8";
 $run2 = mysqli_query($con, $sql2);
 ?>
 <div class="col-lg-4">
@@ -63,6 +63,25 @@ $run2 = mysqli_query($con, $sql2);
               <a href="single.php?id=<?= $recent_post['post_id'] ?>" id="cat_item" title="Click To Visit This Post">
                 <i class="fa fa-angle-double-right" aria-hidden="true"></i>
                 <?= $recent_post['post_title']; ?>
+              </a>
+            </li>
+          <?php } ?>
+        </ul>
+      </div>
+      <!-- ============Recent Comments ==========  -->
+      <div id="posts">
+        <h6 title="Showing Recent Posts">Recent Comments</h6>
+        <ul>
+          <?php
+          $sql3 = "SELECT c.comment ,c.post_id,c.created_at FROM comments c ORDER BY c.created_at DESC limit 5";
+          $run3 = mysqli_query($con, $sql3);
+
+          while ($recent_cmt = mysqli_fetch_assoc($run3)) {
+          ?>
+            <li>
+              <a href="single.php?id=<?= $recent_cmt['post_id'] ?>" id="cat_item" title="Click To Visit This Post">
+                <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                <?= substr($recent_cmt['comment'],0,30) . "..."?>
               </a>
             </li>
           <?php } ?>

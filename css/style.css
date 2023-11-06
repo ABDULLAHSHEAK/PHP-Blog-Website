@@ -324,7 +324,14 @@ a.scroll-to-top.rounded i {
     opacity:1;
     visibility:visible
 }
-.media-library-sec 
+.log-in-button ul li {
+    background: red;
+    border-radius: 4px;
+    margin-top: 5px;
+    padding: 5px;
+    list-style: none;
+    width: 100%;
+}
 
 @media screen and (max-width: 768px) {
   .flex-part2 p{

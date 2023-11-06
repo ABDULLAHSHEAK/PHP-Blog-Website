@@ -117,10 +117,15 @@
                    </div>
                    <div class="media-body">
                      <h4>Total Comments</h4>
-                     <span>Total Post Category</span>
+                     <span>Total Post Comments</span>
                    </div>
                    <div class="align-self-center">
-                     <h1>84,695</h1>
+                     <?php
+                      $query4 = "SELECT COUNT(*) AS total_cmt FROM comments";
+                      $run4= mysqli_query($con, $query4);
+                      $result4 = mysqli_fetch_assoc($run4);
+                      ?>
+                     <h1><?=$result4['total_cmt']?></h1>
                    </div>
                  </div>
                </div>

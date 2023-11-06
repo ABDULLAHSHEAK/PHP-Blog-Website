@@ -90,6 +90,9 @@ $icone = $data['site_icon'];
             </li>
           <?php } ?>
           <li class="nav-item">
+            <a class="nav-link mx-2 text-uppercase btn btn-warning text-white" href="dashboard-demo.php" title="Click here for buy this php script">Dashboard</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link mx-2 text-uppercase btn btn-primary text-white" href="https://www.facebook.com/abdullahshakeabir" title="Click here for buy this php script">Buy This Template</a>
           </li>
         </ul>
